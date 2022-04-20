@@ -1,0 +1,357 @@
+==========================================================================
+pubkey: dms38NrYYPxYEj1VYF4WeFRd1bQvSgtXocYzf8d6sAV
+==========================================================================
+Save this seed phrase and your BIP39 passphrase to recover your new keypair:
+patient lens mixture shrimp hurdle claim girl turkey jar saddle toss color
+==========================================================================
+gitpod /workspace/nft-drop-starter-project (main) $ solana config set --keypair ~/.config/solana/devnet.json
+Config File: /home/gitpod/.config/solana/cli/config.yml
+RPC URL: https://api.devnet.solana.com 
+WebSocket URL: wss://api.devnet.solana.com/ (computed)
+Keypair Path: /home/gitpod/.config/solana/devnet.json 
+Commitment: confirmed 
+gitpod /workspace/nft-drop-starter-project (main) $ solana balance
+Error: RPC request error: cluster version query failed: HTTP status server error (503 Service Unavailable) for url (https://api.devnet.solana.com/)
+gitpod /workspace/nft-drop-starter-project (main) $ solana balance
+0 SOL
+gitpod /workspace/nft-drop-starter-project (main) $ solana airdrop 2
+Requesting airdrop of 2 SOL
+
+Signature: 2ibXFT5YNFdNT1h45YHfDAuQtwxJ6LMHXDS95fkCfdMAdcjYNvfLeb375pAVh8oGzQDwHxUGpKcoUoUBrHUwvLQX
+
+2 SOL
+gitpod /workspace/nft-drop-starter-project (main) $ ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload -e devnet -k ~/.config/solana/devnet.json -cp config.json ./assets
+Error: ENOENT: no such file or directory, scandir './assets'
+    at Object.readdirSync (node:fs:1390:3)
+    at Argument.parseArg (/home/gitpod/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:95:17)
+    at myParseArg (/home/gitpod/metaplex/js/packages/cli/node_modules/commander/lib/command.js:1095:34)
+    at /home/gitpod/metaplex/js/packages/cli/node_modules/commander/lib/command.js:1127:19
+    at Array.forEach (<anonymous>)
+    at Command._processArguments (/home/gitpod/metaplex/js/packages/cli/node_modules/commander/lib/command.js:1110:16)
+    at Command._parseCommand (/home/gitpod/metaplex/js/packages/cli/node_modules/commander/lib/command.js:1230:12)
+    at Command._dispatchSubcommand (/home/gitpod/metaplex/js/packages/cli/node_modules/commander/lib/command.js:1057:25)
+    at Command._parseCommand (/home/gitpod/metaplex/js/packages/cli/node_modules/commander/lib/command.js:1200:19)
+    at Command.parse (/home/gitpod/metaplex/js/packages/cli/node_modules/commander/lib/command.js:889:10) {
+  errno: -2,
+  syscall: 'scandir',
+  code: 'ENOENT',
+  path: './assets'
+}
+gitpod /workspace/nft-drop-starter-project (main) $ git pull
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 14 (delta 4), reused 14 (delta 4), pack-reused 0
+Unpacking objects: 100% (14/14), 2.00 MiB | 9.00 MiB/s, done.
+From https://github.com/ffy/nft-drop-starter-project
+   a5f7390..9a39ace  main       -> origin/main
+Updating a5f7390..9a39ace
+Fast-forward
+ .gitignore     |    24 +
+ app/src/App.js |    59 +-
+ app/yarn.lock  | 11922 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ assets/0.jpg   |   Bin 0 -> 536359 bytes
+ assets/0.json  |    20 +
+ assets/1.jpg   |   Bin 0 -> 595352 bytes
+ assets/1.json  |    20 +
+ assets/2.jpg   |   Bin 0 -> 413662 bytes
+ assets/2.json  |    20 +
+ config.json    |    18 +
+ 10 files changed, 12079 insertions(+), 4 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 app/yarn.lock
+ create mode 100644 assets/0.jpg
+ create mode 100644 assets/0.json
+ create mode 100644 assets/1.jpg
+ create mode 100644 assets/1.json
+ create mode 100644 assets/2.jpg
+ create mode 100644 assets/2.json
+ create mode 100644 config.json
+gitpod /workspace/nft-drop-starter-project (main) $ ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload -e devnet -k ~/.config/solana/devnet.json -cp config.json ./assets
+wallet public key: dms38NrYYPxYEj1VYF4WeFRd1bQvSgtXocYzf8d6sAV
+(node:5947) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:5947) ExperimentalWarning: buffer.Blob is an experimental feature. This feature could change at any time
+WARNING: The "arweave" storage option will be going away soon. Please migrate to arweave-bundle or arweave-sol for mainnet.
+
+Beginning the upload for 3 (img+json) pairs
+started at: 1650454125057
+initializing candy machine
+Error deploying config to Solana network. Error: Invalid config, there must be a symbol.
+    at createCandyMachineV2 (/home/gitpod/metaplex/js/packages/cli/src/helpers/accounts.ts:129:11)
+    at uploadV2 (/home/gitpod/metaplex/js/packages/cli/src/commands/upload.ts:148:45)
+    at Command.<anonymous> (/home/gitpod/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:269:21)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+upload was not successful, please re-run. Error: Invalid config, there must be a symbol.
+    at createCandyMachineV2 (/home/gitpod/metaplex/js/packages/cli/src/helpers/accounts.ts:129:11)
+    at uploadV2 (/home/gitpod/metaplex/js/packages/cli/src/commands/upload.ts:148:45)
+    at Command.<anonymous> (/home/gitpod/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:269:21)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+gitpod /workspace/nft-drop-starter-project (main) $ ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload -e devnet -k ~/.config/solana/devnet.json -cp config.json ./assets
+wallet public key: dms38NrYYPxYEj1VYF4WeFRd1bQvSgtXocYzf8d6sAV
+(node:6076) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6076) ExperimentalWarning: buffer.Blob is an experimental feature. This feature could change at any time
+WARNING: The "arweave" storage option will be going away soon. Please migrate to arweave-bundle or arweave-sol for mainnet.
+
+Beginning the upload for 3 (img+json) pairs
+started at: 1650454195603
+initializing candy machine
+Error deploying config to Solana network. Error: Invalid config, there must be a symbol.
+    at createCandyMachineV2 (/home/gitpod/metaplex/js/packages/cli/src/helpers/accounts.ts:129:11)
+    at uploadV2 (/home/gitpod/metaplex/js/packages/cli/src/commands/upload.ts:148:45)
+    at Command.<anonymous> (/home/gitpod/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:269:21)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+upload was not successful, please re-run. Error: Invalid config, there must be a symbol.
+    at createCandyMachineV2 (/home/gitpod/metaplex/js/packages/cli/src/helpers/accounts.ts:129:11)
+    at uploadV2 (/home/gitpod/metaplex/js/packages/cli/src/commands/upload.ts:148:45)
+    at Command.<anonymous> (/home/gitpod/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:269:21)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+gitpod /workspace/nft-drop-starter-project (main) $ ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload -e devnet -k ~/.config/solana/devnet.json -cp config.json ./assets
+wallet public key: dms38NrYYPxYEj1VYF4WeFRd1bQvSgtXocYzf8d6sAV
+(node:6490) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6490) ExperimentalWarning: buffer.Blob is an experimental feature. This feature could change at any time
+WARNING: The "arweave" storage option will be going away soon. Please migrate to arweave-bundle or arweave-sol for mainnet.
+
+Beginning the upload for 3 (img+json) pairs
+started at: 1650454290866
+initializing candy machine
+Error deploying config to Solana network. Error: Invalid config, there must be a symbol.
+    at createCandyMachineV2 (/home/gitpod/metaplex/js/packages/cli/src/helpers/accounts.ts:129:11)
+    at uploadV2 (/home/gitpod/metaplex/js/packages/cli/src/commands/upload.ts:148:45)
+    at Command.<anonymous> (/home/gitpod/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:269:21)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+upload was not successful, please re-run. Error: Invalid config, there must be a symbol.
+    at createCandyMachineV2 (/home/gitpod/metaplex/js/packages/cli/src/helpers/accounts.ts:129:11)
+    at uploadV2 (/home/gitpod/metaplex/js/packages/cli/src/commands/upload.ts:148:45)
+    at Command.<anonymous> (/home/gitpod/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:269:21)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+gitpod /workspace/nft-drop-starter-project (main) $ ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload -e devnet -k ~/.config/solana/devnet.json -cp config.json ./assets
+wallet public key: dms38NrYYPxYEj1VYF4WeFRd1bQvSgtXocYzf8d6sAV
+(node:6576) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6576) ExperimentalWarning: buffer.Blob is an experimental feature. This feature could change at any time
+WARNING: The "arweave" storage option will be going away soon. Please migrate to arweave-bundle or arweave-sol for mainnet.
+
+Beginning the upload for 3 (img+json) pairs
+started at: 1650454342822
+initializing candy machine
+Error deploying config to Solana network. Error: Invalid config, there must be a symbol.
+    at createCandyMachineV2 (/home/gitpod/metaplex/js/packages/cli/src/helpers/accounts.ts:129:11)
+    at uploadV2 (/home/gitpod/metaplex/js/packages/cli/src/commands/upload.ts:148:45)
+    at Command.<anonymous> (/home/gitpod/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:269:21)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+upload was not successful, please re-run. Error: Invalid config, there must be a symbol.
+    at createCandyMachineV2 (/home/gitpod/metaplex/js/packages/cli/src/helpers/accounts.ts:129:11)
+    at uploadV2 (/home/gitpod/metaplex/js/packages/cli/src/commands/upload.ts:148:45)
+    at Command.<anonymous> (/home/gitpod/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:269:21)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+gitpod /workspace/nft-drop-starter-project (main) $ ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload -e devnet -k ~/.config/solana/devnet.json -cp config.json ./assets
+wallet public key: dms38NrYYPxYEj1VYF4WeFRd1bQvSgtXocYzf8d6sAV
+(node:6818) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6818) ExperimentalWarning: buffer.Blob is an experimental feature. This feature could change at any time
+WARNING: The "arweave" storage option will be going away soon. Please migrate to arweave-bundle or arweave-sol for mainnet.
+
+Beginning the upload for 3 (img+json) pairs
+started at: 1650454506466
+initializing candy machine
+Error deploying config to Solana network. Error: Invalid config, there must be a symbol.
+    at createCandyMachineV2 (/home/gitpod/metaplex/js/packages/cli/src/helpers/accounts.ts:129:11)
+    at uploadV2 (/home/gitpod/metaplex/js/packages/cli/src/commands/upload.ts:148:45)
+    at Command.<anonymous> (/home/gitpod/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:269:21)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+upload was not successful, please re-run. Error: Invalid config, there must be a symbol.
+    at createCandyMachineV2 (/home/gitpod/metaplex/js/packages/cli/src/helpers/accounts.ts:129:11)
+    at uploadV2 (/home/gitpod/metaplex/js/packages/cli/src/commands/upload.ts:148:45)
+    at Command.<anonymous> (/home/gitpod/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:269:21)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+gitpod /workspace/nft-drop-starter-project (main) $ cd -
+/home/gitpod
+gitpod ~ $ rm -rf metaplex/
+gitpod ~ $ git clone -b v1.1.1 https://github.com/metaplex-foundation/metaplex.git
+Cloning into 'metaplex'...
+remote: Enumerating objects: 19861, done.
+remote: Total 19861 (delta 0), reused 0 (delta 0), pack-reused 19861
+Receiving objects: 100% (19861/19861), 56.87 MiB | 23.71 MiB/s, done.
+Resolving deltas: 100% (12702/12702), done.
+Note: switching to '89716fbe6821e5155971bb085aac39472a13774f'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+gitpod ~ $ yarn install --cwd ~/metaplex/js/
+yarn install v1.22.17
+[1/5] Validating package.json...
+[2/5] Resolving packages...
+[3/5] Fetching packages...
+[4/5] Linking dependencies...
+warning "next > styled-jsx > @babel/plugin-syntax-jsx@7.14.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/helper-compilation-targets@7.16.3" has unmet peer dependency "@babel/core@^7.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-syntax-async-generators@7.8.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-syntax-class-properties@7.12.13" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-syntax-json-strings@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-syntax-logical-assignment-operators@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-syntax-nullish-coalescing-operator@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-syntax-numeric-separator@7.10.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-syntax-optional-catch-binding@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-syntax-optional-chaining@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-syntax-top-level-await@7.14.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "lerna > @lerna/version > @lerna/github-client > @octokit/rest > @octokit/plugin-request-log@1.0.4" has unmet peer dependency "@octokit/core@>=3".
+warning " > ts-jest@24.3.0" has incorrect peer dependency "jest@>=24 <25".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env@7.16.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-typescript@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @oyster/common > @testing-library/user-event@7.2.1" has unmet peer dependency "@testing-library/dom@>=5".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-common@4.13.0" has unmet peer dependency "@progress/kendo-licensing@^1.0.1".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-grid@4.13.0" has unmet peer dependency "@progress/kendo-data-query@^1.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-grid@4.13.0" has unmet peer dependency "@progress/kendo-drawing@^1.2.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-grid@4.13.0" has unmet peer dependency "@progress/kendo-licensing@^1.0.1".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-grid@4.13.0" has unmet peer dependency "@progress/kendo-react-animation@^4.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-grid@4.13.0" has unmet peer dependency "@progress/kendo-react-data-tools@^4.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-grid@4.13.0" has unmet peer dependency "@progress/kendo-react-dateinputs@^4.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-grid@4.13.0" has unmet peer dependency "@progress/kendo-react-dropdowns@^4.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-grid@4.13.0" has unmet peer dependency "@progress/kendo-react-intl@^4.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-grid@4.13.0" has unmet peer dependency "@progress/kendo-react-popup@^4.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-inputs@4.13.0" has unmet peer dependency "@progress/kendo-drawing@^1.5.12".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-inputs@4.13.0" has unmet peer dependency "@progress/kendo-licensing@^1.0.1".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-inputs@4.13.0" has unmet peer dependency "@progress/kendo-react-animation@^4.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-inputs@4.13.0" has unmet peer dependency "@progress/kendo-react-intl@^4.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @testing-library/user-event@12.8.3" has unmet peer dependency "@testing-library/dom@>=7.21.4".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > material-ui@0.20.2" has incorrect peer dependency "react@^15.4.0 || ^16.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > material-ui@0.20.2" has incorrect peer dependency "react-dom@^15.4.0 || ^16.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > react-slider@1.3.1" has unmet peer dependency "prop-types@^15.6".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > redux-observable@2.0.0" has unmet peer dependency "redux@>=4 <5".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > use-wallet@0.8.1" has incorrect peer dependency "react@^16.12.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > web > less-loader@10.2.0" has unmet peer dependency "webpack@^5.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > web > react-virtualized@9.22.3" has incorrect peer dependency "react@^15.3.0 || ^16.0.0-alpha".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > web > react-virtualized@9.22.3" has incorrect peer dependency "react-dom@^15.3.0 || ^16.0.0-alpha".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > web > styled-components@5.3.3" has unmet peer dependency "react-is@>= 16.8.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > web > @typechain/ethers-v4@1.0.1" has unmet peer dependency "typechain@^2.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > web > @typechain/ethers-v4@1.0.1" has unmet peer dependency "ethers@^4.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > web > webpack-dev-server@3.11.0" has unmet peer dependency "webpack@^4.0.0 || ^5.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @aws-sdk/client-s3 > @aws-sdk/middleware-sdk-s3@3.41.0" has unmet peer dependency "@aws-sdk/signature-v4-crt@^3.31.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@7.16.2" has unmet peer dependency "@babel/core@^7.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@7.16.0" has unmet peer dependency "@babel/core@^7.13.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-async-generator-functions@7.16.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-class-properties@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-class-static-block@7.16.0" has unmet peer dependency "@babel/core@^7.12.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-dynamic-import@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-export-namespace-from@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-json-strings@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-logical-assignment-operators@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-nullish-coalescing-operator@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-numeric-separator@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-object-rest-spread@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-optional-catch-binding@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-optional-chaining@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-private-methods@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-private-property-in-object@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-unicode-property-regex@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-syntax-class-static-block@7.14.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-syntax-dynamic-import@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-syntax-export-namespace-from@7.8.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-syntax-private-property-in-object@7.14.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-arrow-functions@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-async-to-generator@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-block-scoped-functions@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-block-scoping@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-classes@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-computed-properties@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-destructuring@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-dotall-regex@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-duplicate-keys@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-exponentiation-operator@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-for-of@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-function-name@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-literals@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-member-expression-literals@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-modules-amd@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-modules-commonjs@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-modules-systemjs@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-modules-umd@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-named-capturing-groups-regex@7.16.0" has unmet peer dependency "@babel/core@^7.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-new-target@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-object-super@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-parameters@7.16.3" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-property-literals@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-regenerator@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-reserved-words@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-shorthand-properties@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-spread@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-sticky-regex@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-template-literals@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-typeof-symbol@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-unicode-escapes@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-transform-unicode-regex@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/preset-modules@0.1.5" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > babel-plugin-polyfill-corejs2@0.3.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > babel-plugin-polyfill-corejs3@0.4.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > babel-plugin-polyfill-regenerator@0.3.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-typescript > @babel/plugin-transform-typescript@7.16.1" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @emotion/styled > @emotion/babel-plugin@11.7.1" has unmet peer dependency "@babel/core@^7.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-inputs > @progress/kendo-react-labels@4.13.0" has unmet peer dependency "@progress/kendo-licensing@^1.0.1".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-inputs > @progress/kendo-react-labels@4.13.0" has unmet peer dependency "@progress/kendo-react-intl@^4.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @progress/kendo-react-inputs > @progress/kendo-react-popup@4.13.0" has unmet peer dependency "@progress/kendo-licensing@^1.0.1".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > material-ui > react-event-listener@0.6.6" has incorrect peer dependency "react@^16.3.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > material-ui > react-transition-group@1.2.1" has incorrect peer dependency "react@^15.0.0 || ^16.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > material-ui > react-transition-group@1.2.1" has incorrect peer dependency "react-dom@^15.0.0 || ^16.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > material-ui > recompose@0.26.0" has incorrect peer dependency "react@^0.14.0 || ^15.0.0 || ^16.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > react-tradingview-embed > @testing-library/user-event@13.5.0" has unmet peer dependency "@testing-library/dom@>=7.21.4".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > web > @solana/spl-name-service > crypto-ts@1.0.2" has unmet peer dependency "@angular/common@>= 5.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > web > @solana/spl-name-service > crypto-ts@1.0.2" has unmet peer dependency "@angular/core@>= 5.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > web > @solana/spl-name-service > webpack-dev-server@3.11.3" has unmet peer dependency "webpack@^4.0.0 || ^5.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > web > magic-sdk > @magic-sdk/commons@1.2.1" has incorrect peer dependency "@magic-sdk/provider@^4.3.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > web > magic-sdk > @magic-sdk/commons@1.2.1" has incorrect peer dependency "@magic-sdk/types@^3.1.1".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > web > webpack-dev-server > webpack-dev-middleware@3.7.3" has unmet peer dependency "webpack@^4.0.0 || ^5.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-class-properties > @babel/helper-create-class-features-plugin@7.16.0" has unmet peer dependency "@babel/core@^7.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > @babel/plugin-proposal-unicode-property-regex > @babel/helper-create-regexp-features-plugin@7.16.0" has unmet peer dependency "@babel/core@^7.0.0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-env > babel-plugin-polyfill-corejs2 > @babel/helper-define-polyfill-provider@0.3.0" has unmet peer dependency "@babel/core@^7.4.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @metaplex/cli > @babel/preset-typescript > @babel/plugin-transform-typescript > @babel/plugin-syntax-typescript@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @oyster/common > @solana/wallet-adapter-wallets > @solana/wallet-adapter-torus > @toruslabs/openlogin@0.9.5" has unmet peer dependency "@babel/runtime@7.x".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @oyster/common > @solana/wallet-adapter-wallets > @solana/wallet-adapter-torus > @toruslabs/openlogin-ed25519@0.9.5" has unmet peer dependency "@babel/runtime@7.x".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > @emotion/styled > @emotion/babel-plugin > @babel/plugin-syntax-jsx@7.16.0" has unmet peer dependency "@babel/core@^7.0.0-0".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > use-wallet > @web3-react/torus-connector > @toruslabs/torus-embed@1.18.5" has unmet peer dependency "@babel/runtime@7.x".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @oyster/common > @solana/wallet-adapter-wallets > @solana/wallet-adapter-torus > @toruslabs/openlogin > @toruslabs/http-helpers@1.4.0" has unmet peer dependency "@babel/runtime@7.x".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @oyster/common > @solana/wallet-adapter-wallets > @solana/wallet-adapter-torus > @toruslabs/openlogin > @toruslabs/openlogin-jrpc@0.9.5" has unmet peer dependency "@babel/runtime@7.x".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > @oyster/common > @solana/wallet-adapter-wallets > @solana/wallet-adapter-torus > @toruslabs/openlogin > @toruslabs/openlogin-utils@0.9.5" has unmet peer dependency "@babel/runtime@7.x".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > use-wallet > @web3-react/torus-connector > @toruslabs/torus-embed > @toruslabs/fetch-node-details@4.0.2" has unmet peer dependency "@babel/runtime@7.x".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > use-wallet > @web3-react/torus-connector > @toruslabs/torus-embed > @toruslabs/http-helpers@2.1.4" has unmet peer dependency "@babel/runtime@7.x".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > use-wallet > @web3-react/torus-connector > @toruslabs/torus-embed > @toruslabs/openlogin-jrpc@1.3.3" has unmet peer dependency "@babel/runtime@7.x".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > use-wallet > @web3-react/torus-connector > @toruslabs/torus-embed > @toruslabs/torus.js@4.2.3" has unmet peer dependency "@babel/runtime@7.x".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > use-wallet > @web3-react/torus-connector > @toruslabs/torus-embed > @toruslabs/openlogin-jrpc > @toruslabs/openlogin-utils@1.3.3" has unmet peer dependency "@babel/runtime@7.x".
+warning "workspace-aggregator-63fe03c4-e4ac-4ef5-99fa-abe41a638d9b > gumdrop > use-wallet > @web3-react/walletlink-connector > walletlink > eth-block-tracker > @babel/plugin-transform-runtime@7.16.4" has unmet peer dependency "@babel/core@^7.0.0-0".
+[5/5] Building fresh packages...
+Done in 95.78s.
+gitpod ~ $ ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts --version
+0.0.2
+gitpod ~ $ cd -
+/workspace/nft-drop-starter-project
+gitpod /workspace/nft-drop-starter-project (main) $ ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload -e devnet -k ~/.config/solana/devnet.json -cp config.json ./assets
+wallet public key: dms38NrYYPxYEj1VYF4WeFRd1bQvSgtXocYzf8d6sAV
+WARNING: The "arweave" storage option will be going away soon. Please migrate to arweave-bundle or arweave-sol for mainnet.
+
+Beginning the upload for 3 (img+json) pairs
+started at: 1650454781247
+initializing candy machine
+initialized config for a candy machine with publickey: ChcRVTEL83SNWgNMWQqAsF1vU8hkKM6WkJbJ658nKN8h
+Uploading Size 3 { mediaExt: '.jpg', index: '0' }
+Processing asset: 0
+Processing asset: 1
+Processing asset: 2
+Writing indices 0-2
+Done. Successful = true.
+ended at: 2022-04-20T11:40:26.626Z. time taken: 00:00:45
+gitpod /workspace/nft-drop-starter-project (main) $ 
