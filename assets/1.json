@@ -1,0 +1,20 @@
+{
+  "name": "#001",
+  "symbol": "",
+  "image": "1.png",
+  "properties": {
+    "files": [
+      {
+        "uri": "1.jpg",
+        "type": "image/jpeg"
+      }
+    ],
+    "creators": [
+      {
+        "address": "5HtaHov6REtcechoYsY1i4sHHZZLVGT58Uq5YCRs8bhq",
+        "share": 100
+      }
+    ]
+  },
+  "collection": { "name": "mumu", "family": "mumu" }
+}
