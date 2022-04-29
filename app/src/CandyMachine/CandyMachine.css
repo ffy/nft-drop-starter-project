@@ -31,3 +31,8 @@
   border-radius: 10px;
   object-fit: cover;
 }
+
+.drop-date,
+.items-minted {
+  color: yellow;
+}
